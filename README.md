@@ -1,5 +1,5 @@
 # O.H.P.S.A. - Proof Of Concept
-*O*ne *H*undred *P*ercent *S*erverless *A*rchitecture on AWS by Bruno Bonando
+**O**ne **H**undred **P**ercent **S**erverless **A**rchitecture on AWS by Bruno Bonando
 
 ## Goal
 Create a highly scalable, powerful and cost-efficient serveless architecture.
