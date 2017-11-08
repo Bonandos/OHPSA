@@ -55,3 +55,4 @@ functions:
       - http:
           path: poc/hello
           method: get
+          cors: true
