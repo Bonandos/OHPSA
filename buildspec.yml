@@ -7,15 +7,18 @@ phases:
     install:
         commands:
             - echo Installing source NPM dependencies...
-            - ls
+            - cd frontend/webapp
             - npm install
+            - pwd
+            - ls
     build:
         commands:
             - echo Build started on `date`
+            - cd frontend/webapp
             - ng build
     post_build:
          commands:
-            - aws s3 cp dist s3://${S3_BUCKET} --recursive
+            - aws s3 cp frontend/webapp/dist s3://${S3_BUCKET} --recursive
             - echo Build completed on `date`
 artifacts:
     files:
