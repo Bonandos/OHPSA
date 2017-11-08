@@ -10,6 +10,7 @@ phases:
             - cd frontend/webapp/
             - npm install
             - npm install -g @angular/cli
+            - pwd
     build:
         commands:
             - echo Build started on `date`
@@ -20,6 +21,6 @@ phases:
             - echo Build completed on `date`
 artifacts:
     files:
-        - 'frontend/webapp/**/*'
-    base-directory: 'dist*'
+        - '**/*'
+    base-directory: 'frontend/webapp/dist*'
     discard-paths: yes
