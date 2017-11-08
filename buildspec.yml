@@ -7,8 +7,8 @@ phases:
     install:
         commands:
             - echo Installing source NPM dependencies...
-            - cd frontend/webapp/
             - ls
+            - npm install
     build:
         commands:
             - echo Build started on `date`
@@ -20,5 +20,5 @@ phases:
 artifacts:
     files:
         - '**/*'
-    base-directory: 'dist*'
+    base-directory: 'frontend/webapp/dist*'
     discard-paths: yes
