@@ -7,7 +7,7 @@ phases:
     install:
         commands:
             - echo Installing source NPM dependencies...
-            - cd /frontend/webapp/
+            - cd frontend/webapp/
             - npm install
             - npm install -g @angular/cli
     build:
@@ -16,10 +16,10 @@ phases:
             - ng build
     post_build:
          commands:
-            - aws s3 cp /frontend/webapp/dist s3://${S3_BUCKET} --recursive
+            - aws s3 cp frontend/webapp/dist s3://${S3_BUCKET} --recursive
             - echo Build completed on `date`
 artifacts:
     files:
-        - '/frontend/webapp/**/*'
+        - 'frontend/webapp/**/*'
     base-directory: 'dist*'
     discard-paths: yes
