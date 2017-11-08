@@ -12,6 +12,8 @@ Create a highly scalable, powerful, automated and cost-efficient serveless archi
     - NodeJS
     - Lambda
     - API Gateway
-### - Deploy
-    - Jenkins
+### - Deploy with CI/CD
     - Serverless Framework
+    - Code Build
+    - Code Pipeline
+    
