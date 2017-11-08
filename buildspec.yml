@@ -7,16 +7,16 @@ phases:
     install:
         commands:
             - echo Installing source NPM dependencies...
-            - cd frontend/webapp/
+            - cd /frontend/webapp/
             - npm install yarn -g
             - yarn install
     build:
         commands:
             - echo Build started on `date`
-            - ng build --env=${BUILD_ENV}
+            - ng build
     post_build:
          commands:
-            - aws s3 cp dist s3://${S3_BUCKET} --recursive
+            - aws s3 cp /frontend/webapp/dist s3://${S3_BUCKET} --recursive
             - echo Build completed on `date`
 artifacts:
     files:
