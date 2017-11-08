@@ -2,7 +2,7 @@
 **O**ne **H**undred **P**ercent **S**erverless **A**rchitecture on AWS by Bruno Bonando
 
 ## Goal
-Create a highly scalable, powerful and cost-efficient serveless architecture.
+Create a highly scalable, powerful, automated and cost-efficient serveless architecture.
 
 ## How
 ### - Frontend
