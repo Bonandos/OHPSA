@@ -7,7 +7,7 @@ phases:
     install:
         commands:
             - echo Installing source NPM dependencies...
-            - pwd
+            - cd frontend/webapp/
             - ls
     build:
         commands:
@@ -20,5 +20,5 @@ phases:
 artifacts:
     files:
         - '**/*'
-    base-directory: 'frontend/webapp/dist*'
+    base-directory: 'dist*'
     discard-paths: yes
