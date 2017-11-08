@@ -8,8 +8,8 @@ phases:
         commands:
             - echo Installing source NPM dependencies...
             - cd /frontend/webapp/
-            - npm install yarn -g
-            - yarn install
+            - npm install
+            - npm install -g @angular/cli
     build:
         commands:
             - echo Build started on `date`
