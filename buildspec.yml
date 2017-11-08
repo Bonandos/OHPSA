@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 environment_variables:
     plaintext:
         S3_BUCKET: "ohpsa-webapp"
@@ -9,16 +9,14 @@ phases:
             - echo Installing source NPM dependencies...
             - cd frontend/webapp
             - npm install
-            - pwd
-            - ls
+            - npm install -g @angular/cli
     build:
         commands:
             - echo Build started on `date`
-            - cd frontend/webapp
             - ng build
     post_build:
          commands:
-            - aws s3 cp frontend/webapp/dist s3://${S3_BUCKET} --recursive
+            - aws s3 cp dist s3://${S3_BUCKET} --recursive
             - echo Build completed on `date`
 artifacts:
     files:
