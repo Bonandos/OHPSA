@@ -15,10 +15,10 @@ phases:
             - ng build
     post_build:
          commands:
-            - aws s3 cp frontend/webapp/dist s3://${S3_BUCKET} --recursive
+            - aws s3 cp dist s3://${S3_BUCKET} --recursive
             - echo Build completed on `date`
 artifacts:
     files:
         - '**/*'
-    base-directory: 'frontend/webapp/dist*'
+    base-directory: 'dist*'
     discard-paths: yes
